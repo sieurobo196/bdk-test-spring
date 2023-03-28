@@ -1,4 +1,4 @@
-package com.bdk;
+package com.bdk.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
