@@ -28,6 +28,11 @@ public class HelloController {
 
         return "index";
     }
+    @RequestMapping({"/*","/*/*","/*/*/*"})
+    public String defaultHandler() {
+        // Chuyển hướng đến trang home
+        return "redirect:/";
+    }
 
 //    @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
 //    public String viewPersonList(Model model) {
