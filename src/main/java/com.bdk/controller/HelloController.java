@@ -19,7 +19,7 @@ public class HelloController {
         persons.add(new Person("Steve", "Jobs"));
     }
 
-    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/{path:[^\\.]*}"}, method = RequestMethod.GET)
     public String index(Model model) {
 
         String message = "Hello Spring Boot + JSP";
@@ -29,12 +29,12 @@ public class HelloController {
         return "index";
     }
 
-    @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
-    public String viewPersonList(Model model) {
-
-        model.addAttribute("persons", persons);
-
-        return "personList";
-    }
+//    @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
+//    public String viewPersonList(Model model) {
+//
+//        model.addAttribute("persons", persons);
+//
+//        return "personList";
+//    }
 
 }
